@@ -1,4 +1,4 @@
-# gtest 简单指北
+# gtest 使用指北
 
 ## 准备工作
 
@@ -19,7 +19,7 @@ cmake ../ && make
 
 演示了如何做最基本的单元测试
 
-```
+```c++
 #include <gtest/gtest.h>
 
 int add(int x, int y) {
@@ -35,7 +35,7 @@ TEST(AdditionTest, testAdd) {
 
 演示了如何写一个测试用例集
 
-```
+```c++
 #include <gtest/gtest.h>
 
 class Math {
@@ -66,7 +66,7 @@ TEST_F(MathTestSuite, testSub) {
 
 演示了如何做mock测试，定义了一个简单的常见,FileWriter需要依赖DiskUtil做文件写入，而通过mock掉DiskUtil的写入返回值，从而决定FileWriter应该执行什么逻辑
 
-```
+```c++
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
